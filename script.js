@@ -267,6 +267,30 @@ function checkoutCard() {
   alert("Card / PayPal checkout coming soon.");
 }
 
+function checkoutWhatsApp() {
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  // Build the cart list
+  let itemsList = cart.map((item, index) => {
+    return `${index + 1}. ${item.name} — Size: ${item.size || "Standard"} — KSh ${item.price.toLocaleString()}`;
+  }).join("\n");
+
+  // Calculate total
+  let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  // Build the message
+  let message = `Hello MORØ, this is what I would like to order:\n\n${itemsList}\n\n*Total: KSh ${total.toLocaleString()}*\n\nPlease confirm my order.`;
+
+  // Encode for URL
+  let encodedMessage = encodeURIComponent(message);
+
+  // Open WhatsApp
+  window.open(`https://wa.me/254105550679?text=${encodedMessage}`, "_blank");
+}
+
 /* =======================
    FORMS
    ======================= */

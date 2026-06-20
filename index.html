@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MORØ — Modern Streetwear</title>
+  <link rel="stylesheet" href="style.css" />
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>MORØ — Modern Streetwear | Premium Essentials</title>
+  <meta name="title" content="MORØ — Modern Streetwear | Premium Essentials" />
+  <meta name="description" content="MORØ is a modern streetwear brand built around simplicity, confidence and identity. Shop premium hoodies, tees, caps and tote bags. Made for more." />
+  <meta name="keywords" content="MORØ, streetwear, modern fashion, premium hoodies, essential tees, minimal streetwear, urban clothing, Kenya streetwear, MORØ brand" />
+  <meta name="author" content="DnDlab" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moro.world/" />
+  <meta property="og:title" content="MORØ — Modern Streetwear | Premium Essentials" />
+  <meta property="og:description" content="Quiet luxury meets streetwear. Built for the bold, designed for the minimal. Shop the MORØ Drop 01 collection." />
+  <meta property="og:image" content="/imageOG.jpg" />
+  <meta property="og:site_name" content="MORØ" />
+  <meta property="og:locale" content="en_US" /> 
+  
+  <!-- Twitter / X -->
+  <!-- <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://moro.world/" />
+  <meta property="twitter:title" content="MORØ — Modern Streetwear | Premium Essentials" />
+  <meta property="twitter:description" content="Quiet luxury meets streetwear. Built for the bold, designed for the minimal. Shop the MORØ Drop 01 collection." />
+  <meta property="twitter:image" content="https://moro.world/images/og-image.jpg" />
+  <meta property="twitter:creator" content="@moro.world" />
+   -->
+  <!-- Instagram -->
+  <meta property="instagram:card" content="summary" />
+  <meta property="instagram:site" content="https://www.instagram.com/_moro.wears?igsh=bzA1M3liZ2h6YzZ4&utm_source=qr" />
+  
+  <!-- WhatsApp (uses OG tags) -->
+  
+  <!-- Theme & Mobile -->
+  <meta name="theme-color" content="#111111" />
+  <meta name="msapplication-TileColor" content="#111111" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MORØ" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/fav.png" />
+  <link rel="apple-touch-icon" href="/fav.png" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://moro.world/" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <h1>MORØ</h1>
+    <p>Made For More</p>
+  </div>
+
+  <div class="announcement-bar">
+    FIRST MORØ DROP COMING SOON — LIMITED PIECES ONLY
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">MORØ</div>
+
+      <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collection">Shop</a></li>
+        <li><a href="#tote-drop">Coming Soon</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="toggleWishlist()">Wishlist <span id="wishCount">0</span></button>
+        <button class="cart-btn" onclick="toggleCart()">Cart <span id="cartCount">0</span></button>
+        <button class="menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="small-text">MODERN STREET CULTURE</p>
+      <h1>MORØ</h1>
+      <p>Quiet luxury meets streetwear. Built for the bold, designed for the minimal.</p>
+      <a href="#collection" class="btn">Shop Drop 01</a>
+    </div>
+  </section>
+
+  <section class="featured-drop">
+    <p class="small-text">DROP 01</p>
+    <h2>The Essentials Collection</h2>
+    <p>Heavy hoodies, clean tees, caps and tote bags built around the MORØ identity.</p>
+    <a href="#collection" class="btn">Explore Collection</a>
+  </section>
+
+  <section class="collection" id="collection">
+    <p class="small-text">SHOP MORØ</p>
+    <h2>First Drop</h2>
+    <p class="section-text">Premium essentials in brown, cream, black and grey.</p>
+
+    <div class="shop-toolbar">
+      <span id="productCount">4 products</span>
+      <select id="sortProducts" onchange="sortProducts()">
+        <option value="featured">Sort by: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="newest">Newest</option>
+      </select>
+    </div>
+
+    <div class="products" id="productsGrid"></div>
+  </section>
+
+  <section class="coming-soon" id="tote-drop">
+    <div class="coming-left">
+      <p class="small-text">UPCOMING DROP</p>
+      <h2>MORØ Tote Bags</h2>
+      <p>
+        Clean everyday carry with the MORØ identity. Premium canvas finish in cream,
+        black, brown and grey. Limited first drop coming soon.
+      </p>
+
+      <div class="countdown">
+        <div><span id="days">00</span><small>Days</small></div>
+        <div><span id="hours">00</span><small>Hours</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+
+  <!-- WAITLIST FORM (Coming Soon section) -->
+<form class="waitlist-form" action="https://formspree.io/f/xvznejkw" method="POST">
+  <input type="text" name="first_name" placeholder="First Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="whatsapp" placeholder="WhatsApp Number (e.g. +254712345678)" required pattern="^\+?[0-9\s\-\(\)]{10,20}$">
+  <input type="hidden" name="_subject" value="New MORØ Tote Waitlist Signup">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+  <button type="submit">Join Waitlist</button>
+</form>
+
+      <a href="https://wa.me/254105550679?text=Hi%20MORØ%2C%20I%20want%20to%20pre-order%20the%20Tote%20Bag" class="preorder-btn">
+        Pre-Order via WhatsApp
+      </a>
+    </div>
+
+    <div class="coming-right">
+      <div class="tote-card">
+        <img src="Tote 1.png" alt="MORØ Tote Bag">
+        <div class="badge">COMING SOON</div>
+        <div class="floating-tag">MORØ WORLDWIDE</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <p class="small-text">SOCIAL PROOF</p>
+    <h2>Customer Reviews</h2>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <span>★★★★★</span>
+        <p>“Premium quality and fit. The aesthetic feels expensive.”</p>
+        <h4>— Brian M.</h4>
+      </div>
+
+      <div class="review-card">
+        <span>★★★★★</span>
+        <p>“Exactly the kind of minimal streetwear I’d wear daily.”</p>
+        <h4>— Sarah K.</h4>
+      </div>
+
+      <div class="review-card">
+        <span>★★★★★</span>
+        <p>“Clean brand identity. MORØ already feels official.”</p>
+        <h4>— Jayden O.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="instagram">
+    <p class="small-text">@MORØ.WORLD</p>
+    <h2>Instagram Feed</h2>
+
+    <div class="insta-grid">
+      <img src="insta1.webp" alt="Instagram Post 1">
+      <img src="insta2.webp" alt="Instagram Post 2">
+      <img src="insta3.webp" alt="Instagram Post 3">
+      <img src="insta4.webp" alt="Instagram Post 4">
+      <img src="insta5.webp" alt="Instagram Post 5">
+      <img src="insta6.webp" alt="Instagram Post 6">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <p class="small-text">ABOUT THE BRAND</p>
+      <h2>Made for More.</h2>
+      <p>
+        MORØ is a modern streetwear brand built around simplicity, confidence and identity.
+        Our pieces are designed to feel premium, wearable and timeless.
+      </p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Join The Drop List</h2>
+    <p>Be first to know when MORØ releases.</p>
+ <!-- NEWSLETTER FORM (Drop List section) -->
+<form action="https://formspree.io/f/xvznejkw" method="POST">
+  <input type="text" name="first_name" placeholder="First Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="whatsapp" placeholder="WhatsApp Number (e.g. +254712345678)" required pattern="^\+?[0-9\s\-\(\)]{10,20}$">
+  <input type="hidden" name="_subject" value="New MORØ Drop List Signup">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+  <button type="submit">Join</button>
+</form>
+  </section>
+
+  <footer>
+    <h3>MORØ</h3>
+    <p>Quality Over Everything.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/_moro.wears?igsh=bzA1M3liZ2h6YzZ4&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://wa.me/254105550679" target="_blank">WhatsApp</a>
+    </div>
+    <p class="copy">© 2026 MORØ by DnD. All rights reserved.</p>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view" id="quickView">
+    <div class="quick-box">
+      <button class="close-modal" onclick="closeQuickView()">×</button>
+      <div class="quick-img" id="quickImg"></div>
+
+      <div class="quick-info">
+        <p class="small-text">MORØ PRODUCT</p>
+        <h2 id="quickName"></h2>
+        <p id="quickDesc"></p>
+        <h3 id="quickPrice"></h3>
+
+        <label>Size</label>
+        <select id="quickSize">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+
+        <label>Quantity</label>
+        <input type="number" id="quickQty" value="1" min="1">
+
+        <button class="quick-add" onclick="addQuickToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="toggleCart()">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">KSh 0</strong>
+      </div>
+      <button class="checkout-btn" onclick="checkoutMpesa()">Checkout with M-Pesa</button>
+      <button class="checkout-btn secondary" onclick="checkoutCard()">Pay with Card / PayPal</button>
+      <a href="https://wa.me/254105550679?text=Hi%20MORØ%2C%20I%20want%20to%20place%20an%20order" class="checkout-btn">
+        Checkout via WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div class="cart-drawer wishlist-drawer" id="wishlistDrawer">
+    <div class="cart-header">
+      <h3>Wishlist</h3>
+      <button onclick="toggleWishlist()">×</button>
+    </div>
+    <div id="wishlistItems" class="cart-items"></div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="closeDrawers()"></div>
+  <div class="cursor"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
